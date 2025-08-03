@@ -13,7 +13,7 @@ cursor = connection.cursor()
 
 -- Command to create Customer table
 cursor.execute("""
-    CREATE TABLE IF NOT EXISTS Customer (
+    CREATE TABLE IF NOT EXISTS customer (
         customer_id INT AUTO_INCREMENT PRIMARY KEY,
         customer_name VARCHAR(215) NOT NULL,
         email VARCHAR(215),
@@ -23,7 +23,7 @@ cursor.execute("""
 
 -- Command to insert a single customer record 
 cursor.execute("""
-    INSERT INTO Customer (customer_id, customer_name, email, address)
+    INSERT INTO customer (customer_id, customer_name, email, address)
     VALUES (%s, %s, %s, %s)
 """, (1, 'Cole Baidoo', 'cbaidoo@sandtech.com', '123 Happiness Ave.'))
 
